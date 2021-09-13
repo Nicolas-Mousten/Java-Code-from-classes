@@ -1,32 +1,33 @@
 import java.util.Scanner;
 
 public class Arrays_13_september_nr3 {
-    public static String[] ArrayOfNames;
-
+    public static String[] names;
+    public static String[] arrayOfNames = {"johannes", "benjamin"};
     public static String[] ArrayOfNames(int number, String name){
-        String[] arrayOfNames = new String[10];
-        arrayOfNames[number] = name;
-        return ArrayOfNames;
+        arrayOfNames [number] = name;
+        return arrayOfNames;
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean menu = false;
-        while (menu == false) {
+        boolean menu = true;
+        while (menu != false) {
             System.out.println("Write in a name");
             String name = scanner.nextLine();
             System.out.println("Choose location in array");
-            int number = scanner.nextInt()-1;
+            int number = scanner.nextInt();
             scanner.nextLine();
-            ArrayOfNames(number,name);
+            names = ArrayOfNames(number,name);
             System.out.println("Press q to se your array");
             String answer = "";
+            System.out.println("or anything to continue");
+            answer = scanner.nextLine();
             if (answer.equals("q")) {
-                menu = true;
+                menu = false;
             }
-            for (int i = 0; i < ArrayOfNames.length; i++) {
-                System.out.println(ArrayOfNames[i]);
-            }
-        }
 
+        }
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]);
+        }
     }
 }
