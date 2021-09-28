@@ -1,3 +1,4 @@
+
 public class Arrays_13_september_nr1 {
     public static void main(String[] args) {
         int[] arrayOfIntegers = {6, 3, 7, 4, 3, 1};
@@ -7,8 +8,10 @@ public class Arrays_13_september_nr1 {
             System.out.println(arrayOfIntegers[i]);
 
         }
-        arrayOfIntegers[1] = 9;
+        arrayOfIntegers[1] = arrayOfIntegers[1]+5;
         System.out.println(arrayOfIntegers[1]);
-        }
+
+    }
+
     }
 

@@ -16,7 +16,9 @@ public class Arrays_13_september_nr3 {
             System.out.println("Choose location in array");
             int number = scanner.nextInt();
             scanner.nextLine();
+
             names = ArrayOfNames(number,name);
+
             System.out.println("Press q to se your array");
             String answer = "";
             System.out.println("or anything to continue");
