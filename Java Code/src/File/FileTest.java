@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileTest {
+    public static String firstLine;
     public static void main(String[] args) {
         ArrayList<TestClass> arrayListOfNames = new ArrayList<>();
         File test = new File("Resources/TestCSVFile.csv");
@@ -24,7 +25,7 @@ public class FileTest {
                     TestClass current = new TestClass(id, name, lastName);
                     arrayListOfNames.add(current);
                 }else {
-                    sc.nextLine();
+                    firstLine = sc.nextLine();
                 }
                 count++;
             }
@@ -45,6 +46,7 @@ public class FileTest {
             String lastName = scanner.nextLine();
             TestClass input = new TestClass(id,name,lastName);
             arrayListOfNames.add(input);
+            testWriter.write(firstLine+"\n");
             for (int i = 0; i < arrayListOfNames.size(); i++) {
                 TestClass temp = arrayListOfNames.get(i);
                 int inputId = temp.getId();
