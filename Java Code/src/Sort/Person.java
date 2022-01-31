@@ -7,7 +7,7 @@ import java.util.Collections;
 class Run{
     public static void main(String[] args) {
         Person person1 = new Person("Nicolas",1.90,21);
-        Person person2 = new Person("Harald",1.50,17);
+        Person person2 = new Person("Harald",1.50,21);
         Person person3 = new Person("Andreas",2.00,25);
         Person person4 = new Person("Cathrine",1.70,29);
         ArrayList<Person> people = new ArrayList<Person>(

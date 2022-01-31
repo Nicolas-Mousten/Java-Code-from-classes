@@ -11,7 +11,7 @@ public class FileTest {
     public static String firstLine;
     public static void main(String[] args) {
         ArrayList<TestClass> arrayListOfNames = new ArrayList<>();
-        File test = new File("Resources/TestCSVFile.csv");
+        File test = new File("");
         try{
             Scanner sc = new Scanner(test);
             int count = 0;
@@ -44,8 +44,10 @@ public class FileTest {
             scanner.nextLine();
             String name = scanner.nextLine();
             String lastName = scanner.nextLine();
+
             TestClass input = new TestClass(id,name,lastName);
             arrayListOfNames.add(input);
+
             testWriter.write(firstLine+"\n");
             for (int i = 0; i < arrayListOfNames.size(); i++) {
                 TestClass temp = arrayListOfNames.get(i);
